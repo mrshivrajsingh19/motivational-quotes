@@ -1,0 +1,153 @@
+/* Basic resets and body */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: https://www.dreamstime.com/photos-images/inspirational-background.html;
+  /* background-size: cover;
+  background-position: center; */
+  color: #333;
+}
+
+.motivation-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: rgba(240, 249, 255, 0.85); /* soft sky blue */
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* ensure contents stay above blocked overlay if added */
+.motivation-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+.motivation-title {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #4a5568;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.motivation-subtitle {
+  margin-top: 0.5rem;
+  color: #718096;
+  font-style: italic;
+}
+
+.motivation-count {
+  margin: 1rem 0 2rem;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+/* quote card styles */
+.quote-card {
+  padding: 1.5rem;
+  background: #edf2f7;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.quote-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.quote-text {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #2d3748;
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+}
+
+.quote-author {
+  margin-top: 0.75rem;
+  color: #4a5568;
+  text-align: right;
+  font-style: italic;
+  opacity: 0;
+  animation: fadeIn 0.6s 0.2s forwards;
+}
+
+.loading-text {
+  font-style: italic;
+  color: #718096;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* buttons */
+.motivation-btn {
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.15s;
+}
+.motivation-btn:active {
+  transform: scale(0.95);
+}
+
+.motivation-btn.like {
+  background: #e53e3e;
+  color: #fff;
+}
+.motivation-btn.like:hover {
+  background: #c53030;
+}
+
+.motivation-btn.unlike {
+  background: #edf2f7;
+  color: #2d3748;
+  border: 1px solid #cbd5e0;
+}
+.motivation-btn.unlike:hover {
+  background: #e2e8f0;
+}
+
+.motivation-btn.new {
+  background: #3182ce;
+  color: #fff;
+}
+.motivation-btn.new:hover {
+  background: #2b6cb0;
+}
+
+.motivation-btn.filter.active {
+  background: #2b6cb0;
+  color: #fff;
+}
+
+.filters {
+  margin-bottom: 1.5rem;
+}
+
+.quotes-list .quote-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.quotes-list .quote-item:last-child {
+  border-bottom: none;
+}
+
+.quote-item-text strong {
+  color: #2d3748;
+}
+
+.empty-message {
+  color: #718096;
+  font-style: italic;
+}
